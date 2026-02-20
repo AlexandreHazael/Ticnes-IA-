@@ -1,0 +1,250 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0b0f1a;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  /* NAVBAR */
+  .header {
+    position: sticky;
+    top: 0;
+    background: rgba(11, 15, 26, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  /* CONTAINER DO LOGO */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre a imagem e o texto */
+    text-decoration: none;
+  }
+  
+  /* IMAGEM DO LOGO */
+  .logo-img {
+    width: 45px; /* Tamanho ajustável conforme sua preferência */
+    height: 45px;
+    border-radius: 50%; /* Mantém o formato circular da sua imagem */
+    object-fit: cover;
+    border: 1px solid #00e0ff33; /* Um leve brilho azul ao redor */
+  }
+  
+  /* TEXTO DO LOGO */
+  .logo-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .logo-text span {
+    color: #00e0ff;
+  }
+  
+  /* AJUSTE PARA MOBILE */
+  @media (max-width: 768px) {
+    .logo-img {
+      width: 35px;
+      height: 35px;
+    }
+    .logo-text {
+      font-size: 1.2rem;
+    }
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .nav-links a:hover {
+    color: #00e0ff;
+  }
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 120px 0 100px;
+    text-align: center;
+    background: radial-gradient(circle at top, #111a2e, #05070f);
+    overflow: hidden;
+  }
+  .hero-content h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+  .hero-content span {
+    color: #00e0ff;
+  }
+  .hero-content p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.85;
+  }
+  .hero-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #00e0ff33;
+    filter: blur(120px);
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* BUTTON */
+  .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #00e0ff, #0077ff);
+    padding: 12px 28px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+ /* ESTILO BASE DO BOTÃO (Para <a> e <button>) */
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #00e0ff, #0077ff);
+    padding: 12px 28px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease; /* Transição suave para todos os estados */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  /* HOVER (Passar o mouse) */
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 224, 255, 0.3);
+    filter: brightness(1.1); /* Dá um leve brilho no hover */
+  }
+  
+  /* ACTIVE (O momento do clique/toque) */
+  .btn-primary:active {
+    transform: translateY(1px); /* O botão "desce" ao ser clicado */
+    box-shadow: 0 2px 10px rgba(0, 224, 255, 0.2);
+    filter: brightness(0.9); /* Escurece levemente para simular pressão */
+  }
+  /* SECTIONS */
+  .section {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .section.dark {
+    background: #070b14;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .section-text {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.85;
+  }
+  /* CARDS */
+  .cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+  .card {
+    background: #0f1629;
+    padding: 2rem;
+    border-radius: 14px;
+    width: 260px;
+    transition: 0.3s;
+    border: 1px solid #1e2a4a;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    border-color: #00e0ff;
+  }
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  /* FORM */
+  .contact-form {
+    max-width: 500px;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #1e2a4a;
+    background: #0f1629;
+    color: white;
+  }
+  .contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #05070f;
+    opacity: 0.8;
+  }
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 5%;
+      background: #0f1629;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  }
